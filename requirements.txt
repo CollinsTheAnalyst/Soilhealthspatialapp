@@ -16,3 +16,5 @@ openpyxl
 xlrd
 requests
 pyyaml
+openai
+altair
