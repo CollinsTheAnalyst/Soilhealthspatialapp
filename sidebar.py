@@ -10,7 +10,7 @@ def render_sidebar(page_name: str):
             padding: 5px;
             border-radius: 15px;        /* Rounded corners */
             margin: 10px;               /* Space from window edge */
-            width: 400px !important;    /* Shrink width */
+            width: 420px !important;    /* Shrink width */
             box-shadow: 2px 2px 12px rgba(0,0,0,0.3); /* Floating effect */
         }
 
