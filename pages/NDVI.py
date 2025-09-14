@@ -1,4 +1,5 @@
 import streamlit as st
+from sidebar import render_sidebar
 import geemap
 import ee
 import pandas as pd
@@ -11,19 +12,8 @@ ee.Initialize(project="ee-collinsmwiti98")
 
 # Page setup
 st.set_page_config(page_title="NDVI Viewer", page_icon="🌱", layout="wide")
-st.sidebar.image("logo2.png", use_container_width=True)
 
-st.sidebar.title("About")
-st.sidebar.info("""Check out your farm's vegetation health using NDVI/EVI analysis.""")
-
-st.sidebar.title("Contact")
-st.sidebar.info("""
-Collins Mwiti | 
-0714326105 |
-Collinskimathimwiti@gmail.com|
-[GitHub](https://github.com/CollinsTheAnalyst) |   
-[LinkedIn](https://www.linkedin.com/in/giswqs)
-""")
+render_sidebar("NDVI")
 
 st.title("🌱 NDVI/EVI Analysis")
 
@@ -58,7 +48,7 @@ county_geometry = county_feature.geometry()
 # Function to generate time series
 def generate_time_series(farm_geom, metric, start, end):
     collection = (
-        ee.ImageCollection("MODIS/006/MOD13Q1")
+        ee.ImageCollection("MODIS/061/MOD13Q1")
         .filterBounds(farm_geom)
         .filterDate(str(start), str(end))
         .select([metric])
@@ -130,7 +120,7 @@ with col1:
     folium.LayerControl().add_to(Map)
 
 # Show in Streamlit
-    Map.to_streamlit(height=800)
+    Map.to_streamlit(height=600)
 
 
 if plot_button:

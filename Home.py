@@ -50,12 +50,10 @@ st.subheader("Timelapse of Satellite Imagery")
 
 row1_col1, row1_col2 = st.columns(2)
 with row1_col1:
-    st.image("Data\spain.gif")
+    st.image("Data\\spain.gif")
 
 with row1_col2:
-    st.image("Data\goes.gif")
-
-
+    st.image("Data\\goes.gif")
 
 
 

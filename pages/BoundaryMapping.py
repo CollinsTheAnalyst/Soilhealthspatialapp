@@ -4,6 +4,7 @@ import geemap
 import geemap.foliumap as geemap
 import ee
 import pandas as pd
+from sidebar import render_sidebar
 
 ee.Authenticate()
 ee.Initialize(project="ee-collinsmwiti98")
@@ -11,20 +12,9 @@ ee.Initialize(project="ee-collinsmwiti98")
 # Set page configurations
 st.set_page_config(page_title="Field Boundary Mapping", page_icon="🌱", layout="wide")
 
-st.sidebar.image("logo2.png", use_container_width=True)
-st.sidebar.title("About")
-st.sidebar.info("""An app developed by for Soil Health and crop health Spatial Data Analysis.""")
+render_sidebar("Boundary Mapping")
 
-st.sidebar.title("Contact")
-st.sidebar.info("""
-Collins Mwiti|
-0714326105 |
-Collinskimathimwiti@gmail.com|
-[GitHub](https://github.com/CollinsTheAnalyst) |   
-[LinkedIn](https://www.linkedin.com/in/giswqs)
-""")
-
-st.header("Field Boundary Mapping")
+st.title("Field Boundary Mapping")
 
 col1,col2 = st.columns([4,1], gap="large", vertical_alignment="top", border=False, width="stretch")
 options = list(["Field Boundary Mapping"])

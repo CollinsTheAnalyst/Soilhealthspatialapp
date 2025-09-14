@@ -1,4 +1,6 @@
 import streamlit as st
+from sidebar import render_sidebar
+from streamlit_option_menu import option_menu
 import geemap
 import geemap.foliumap as geemap
 import ee
@@ -7,21 +9,8 @@ ee.Authenticate()
 ee.Initialize(project='ee-collinsmwiti98')
 
 st. set_page_config(page_title="Soil Taxonomic Groups", page_icon="🌱", layout="wide")
+render_sidebar("Soil Taxonomic Groups")
 
-st.sidebar.image("logo2.png", use_container_width=True)
-st.sidebar.title("About")
-st.sidebar.info("""
-An app developed by for Soil Health and crop health Spatial Data Analysis.""")
-
-st.sidebar.title("Contact")
-st.sidebar.title("Contact")
-st.sidebar.info("""
-Collins Mwiti | 
-0714326105 |
-Collinskimathimwiti@gmail.com|
-[GitHub](https://github.com/CollinsTheAnalyst) |   
-[LinkedIn](https://www.linkedin.com/in/giswqs)
-""")
 
 st.title("Soil Taxonomic Groups")
 col1, col2 = st.columns([4,1], gap="large", vertical_alignment="top", border=False, width="stretch")
