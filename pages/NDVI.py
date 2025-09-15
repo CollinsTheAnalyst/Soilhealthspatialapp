@@ -1,6 +1,5 @@
 import streamlit as st
 from sidebar import render_sidebar
-import geemap
 import ee
 import pandas as pd
 import geemap.foliumap as geemap
@@ -119,10 +118,10 @@ with col1:
 # Add layer control (like in Colab)
     folium.LayerControl().add_to(Map)
 
+
 # Show in Streamlit
     Map.to_streamlit(height=600)
-
-
+    
 if plot_button:
         df = generate_time_series(farm_geometry, metric, start_date, end_date)
 

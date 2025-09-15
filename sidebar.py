@@ -9,24 +9,32 @@ def render_sidebar(page_name: str):
             background-color: #1b4332;  /* Dark green */
             padding: 5px;
             border-radius: 15px;        /* Rounded corners */
-            margin: 10px;               /* Space from window edge */
-            width: 420px !important;    /* Shrink width */
+            margin: 4px;               /* Space from window edge */
+            width: 400px !important;    /* Shrink width */
             box-shadow: 2px 2px 12px rgba(0,0,0,0.3); /* Floating effect */
+            font-family: 'Arial', sans-serif; /* Custom font */
+            color: #000000;              /* Black text */
+            font-size: 1.15rem;          /* Slightly larger text */
+            line-height: 1.25;           /* Improve readability */
         }
-
+        
         }
         [data-testid="stSidebar"] h1, 
         [data-testid="stSidebar"] h2, 
         [data-testid="stSidebar"] h3 {
             color: #2e7d32; /* green titles */
-            font-size: 1.25rem; /* bigger titles */
+            font-size: 1.15rem; /* bigger titles */
         }
         [data-testid="stSidebar"] p, 
         [data-testid="stSidebar"] li, 
         [data-testid="stSidebar"] div {
-            font-size: 1.1rem; /* bigger normal text */
-            line-height: 1.4;  /* improve readability */
+            font-size: 1.15rem; /* bigger normal text */
+            line-height: 1.3;  /* improve readability */
             color: #ffffff;    /* white for normal text */
+            font-family: 'Arial', sans-serif; /* Custom font */
+            margin-bottom: 4x; /* space between paragraphs */
+            text-align: justify; /* justify text */
+
         }
         </style>
         """,
